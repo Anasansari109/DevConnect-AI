@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://devconnect-backend-ne1v.onrender.com/api";
 
 // 🔐 Signup
 export const signupUser = async (data) => {
@@ -42,8 +42,9 @@ export const createPost = async (data) => {
   return res.json();
 };
 
+// 📄 Get Posts
 export const getPosts = async () => {
-  const res = await fetch("http://localhost:5000/api/posts");
+  const res = await fetch(`${BASE_URL}/posts`);
   return res.json();
 };
 
